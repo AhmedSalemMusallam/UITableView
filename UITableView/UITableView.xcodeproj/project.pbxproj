@@ -56,15 +56,47 @@
 		5BD9546B296EA11A0040409E /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				5BD9546C296EA11A0040409E /* AppDelegate.swift */,
-				5BD9546E296EA11A0040409E /* SceneDelegate.swift */,
-				5BD95470296EA11A0040409E /* ViewController.swift */,
-				5BD95472296EA11A0040409E /* Main.storyboard */,
-				5BD95475296EA11A0040409E /* Assets.xcassets */,
-				5BD95477296EA11A0040409E /* LaunchScreen.storyboard */,
+				5BD95483296EA1910040409E /* Views */,
+				5BD95482296EA1880040409E /* Controllers */,
+				5BD95481296EA1820040409E /* Resources */,
+				5BD95480296EA1740040409E /* Application */,
 				5BD9547A296EA11A0040409E /* Info.plist */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		5BD95480296EA1740040409E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5BD9546C296EA11A0040409E /* AppDelegate.swift */,
+				5BD9546E296EA11A0040409E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5BD95481296EA1820040409E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BD95475296EA11A0040409E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5BD95482296EA1880040409E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD95470296EA11A0040409E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BD95483296EA1910040409E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BD95472296EA11A0040409E /* Main.storyboard */,
+				5BD95477296EA11A0040409E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
