@@ -36,6 +36,27 @@ extension ViewController :UITableViewDelegate, UITableViewDataSource
                                                         for: indexPath)
         cell.textLabel?.text = SettingsTableViewData[indexPath.row]
         cell.textLabel?.font = UIFont(name:"Helvetica Neue Bold", size:17)
+        
+        switch indexPath.row
+        {
+        case 0:
+            cell.imageView?.image = UIImage(systemName: "moon")
+            //here is programatically switch make to the table view
+            let switchView = UISwitch(frame: .zero)
+            switchView.setOn(false, animated: true)
+            switchView.tag = indexPath.row // for detect which row switch Changed
+//            switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+            cell.accessoryView = switchView
+        case 1:
+            cell.imageView?.image = UIImage(systemName: "globe")
+        case 2:
+            cell.imageView?.image = UIImage(systemName: "scanner.fill")
+        case 3:
+            cell.imageView?.image = UIImage(systemName: "coloncurrencysign.circle.fill")
+        default:
+            print("Do Not Do Any Thing")
+        }
+        
         return cell
     }
     
