@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var basicTableView: UITableView!
-    let tableViewData = Array(repeating: "Item", count: 5)
+    let SettingsTableViewData = ["Dark Mode", "Language", "Default Metal", "Default Currency"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +28,23 @@ class ViewController: UIViewController {
 extension ViewController :UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewData.count
+        return SettingsTableViewData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell",
-                                                       for: indexPath)
-        cell.textLabel?.text = tableViewData[indexPath.row]
+                                                        for: indexPath)
+        cell.textLabel?.text = SettingsTableViewData[indexPath.row]
+        cell.textLabel?.font = UIFont(name:"Helvetica Neue Bold", size:17)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 60
+        }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }
 
